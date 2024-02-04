@@ -22,7 +22,7 @@
     Object.assing(<a>, <b>) - połączenie obkiektu a z obiektem b
 */
 
-const uczniowe = [
+const uczniowie = [
     {wiek: 69, imie: "Jan"},    // 0
     {wiek: 100, imie: "Paweł"}, // 1
     {wiek: 21, imie: "Gaweł"},   // 2
@@ -31,11 +31,27 @@ const uczniowe = [
 
 function rozwiazanie()
 {
+    
     // MIEJSCE NA WASZ KOD
+    const blizniaki =[];
+    
+    for (const uczen of uczniowie)
+    {
+        const blizniak = {...uczen};
+        blizniak.wiek--;
+        blizniak.imie=blizniak.imie + " Zenon"
+
+        blizniaki.push(blizniak)
+
+    }
+for(const blizniak of blizniaki) 
+{
+    uczniowie.push(blizniak)
+}
 }
 
 rozwiazanie();
-console.log(sprawdzZadanie(uczniowe));
+console.log(sprawdzZadanie(uczniowie));
 
 // NIE PATRZ TU OK
 
